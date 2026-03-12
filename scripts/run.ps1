@@ -4,7 +4,7 @@ $url = "https://config.zscaler.com/api/zscaler.net/hubs/cidr/json/recommended"
 
 $downloadFolder = "$scriptDir\download"
 $backupFolder = "$scriptDir\backup"
-$zscalerFile = Join-Path $downloadFolder "zscaler_ipv4.json"
+$zscalerFile = Join-Path $downloadFolder "zscaler_ipv4.txt"
 
 $sfFile = "force-app/main/default/settings/Security.settings-meta.xml"
 
