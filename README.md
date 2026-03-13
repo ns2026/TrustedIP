@@ -32,3 +32,25 @@ Execute the script to update your trusted IP:
 
 C:\Projects\TrustedIP>.\scripts\run.ps1
 
+
+PowerShell Script Execution Error:
+
+Error 1: 
+PS C:\DEV\TrustedIP> .\scripts\run.ps1
+.\scripts\run.ps1 : File C:\DEV\TrustedIP\scripts\run.ps1 cannot be loaded because running scripts is disabled on this system. For more 
+information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ .\scripts\run.ps1
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\DEV\TrustedIP>
+
+Reason: PowerShell does not allow scripts to run because the execution policy is restricted.
+
+Solution: Run the following command from the project directory:
+
+C:\DEV\TrustedIP> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+Then execute the script again: .\scripts\run.ps1
+
